@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/satyamkumarjha9966/Idea_App/issues"
   },
-  "homepage": "https://github.com/satyamkumarjha9966/Idea_App#readme"
+  "homepage": "https://github.com/satyamkumarjha9966/Idea_App#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
