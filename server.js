@@ -3,6 +3,7 @@ const serverConfig = require('./config/server.config.js')
 const mongoose = require('mongoose')
 const dbConfig = require('./config/db.config.js')
 const userModel = require('./Models/user.model.js')
+const bcrypt = require('bcrypt')
 
 const app = express();
 
@@ -38,12 +39,11 @@ async function init() {
         userId : "admin",
         email: "satyamkumarjha9696@gmail.com",
         userType: "ADMIN",
-        password: "sat1"
+        password: bcrypt.hashSync("sat1", 8)
     });
-    console.log(admin);
-}
+    console.log(admin);}
 
 
 app.listen(serverConfig.PORT, () => {
     console.log(`The Server is running on http://localhost:${serverConfig.PORT}`);
-})
+})-
